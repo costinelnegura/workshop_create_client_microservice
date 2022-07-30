@@ -1,4 +1,4 @@
-package com.costinel.repo;
+package com.costinel.workshop_create_client_microservice.repo;
 
 import com.costinel.workshop_create_client_microservice.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
