@@ -24,9 +24,10 @@ public class WorkshopCreateClientMicroserviceApplicationController {
     }
 
     @PostMapping(value = "/saveClient")
-    public String saveClient(@RequestBody Client client){
-        userRepo.save(client);
-        return "Client saved successfully!";
+    public long saveClient(@RequestBody Client client){
+        long id = userRepo.save(client).getiD();
+        System.out.println("Client saved successfully!");
+        return id;
     }
 
     @PutMapping(value = "/updateClient/{id}")
